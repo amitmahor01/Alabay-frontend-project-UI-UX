@@ -4,14 +4,14 @@ import RoadMapImg from '../images/roadMap.png';
 function RoadMap() {
   return (
     <div className="h-auto w-screen bg-gradient-to-bl from-[#FFC700] to-white via-white">
-      <div className="w-full text-[#ffa800] font-CheeseBurga font-extrabold text-[100px] ml-28 p-12">
+      <div className="w-full text-[#ffa800] font-CheeseBurga font-extrabold text-[100px] ml-28 p-12 road-map-title">
         <h1>Road Map</h1>
       </div>
 
       {/* Flex container to align text and image in the same row */}
       <div className="flex justify-between items-start mt-12 px-20">
         {/* Text content */}
-        <div className="w-[400px] text-gray-800 text-2xl font-bold">
+        <div className="w-[400px] text-gray-800 text-2xl font-bold road-map-text">
           <p>
             Our journey is just beginning. Explore our roadmap to see the exciting
             milestones and future plans we have in store.
@@ -22,8 +22,8 @@ function RoadMap() {
         </div>
 
         {/* Image content */}
-        <div className="w-[600px]">
-          <img src={RoadMapImg} alt="Road Map" className="-mt-48 -ml-28 p-12"/>
+        <div className="w-[600px] road-map-img">
+          <img src={RoadMapImg} alt="Road Map" className="-mt-48 -ml-28 p-12 "/>
         </div>
       </div>
     </div>

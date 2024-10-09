@@ -65,13 +65,13 @@ function Merchandise() {
 
     return (
       <div className="h-auto w-screen bg-gradient-to-tl from-[#FFC700] to-yellow-400 via-white flex-col items-center">
-        <div className="w-full text-[#ffa800] font-CheeseBurga font-extrabold text-[120px] p-12 leading-tight  text-center">
+        <div className="merchandise-title w-full text-[#ffa800] font-CheeseBurga font-extrabold text-[120px] p-12 leading-tight  text-center">
           <h1>Merchandise</h1>
         </div>
 
         {/* Container for the merchandise with transitions */}
         <div
-          className={`w-[70vw] h-[500px] flex justify-center items-center relative ml-48 rounded-xl transition-all duration-500`}
+          className={`md:w-[70vw] md:h-[500px] flex justify-center items-center relative md:ml-48 rounded-xl transition-all duration-500`}
           style={{
             backgroundImage: `url(${items[currentIndex].backgroundImageUrl})`, // Dynamically setting the background image
             backgroundSize: 'cover',
@@ -90,7 +90,7 @@ function Merchandise() {
           <img
             src={items[currentIndex].imageUrl}
             alt={items[currentIndex].altText}
-            className={`w-auto h-auto p-44 transition-opacity duration-500 ease-in-out ${
+            className={`md:w-auto md:h-auto md:p-44 transition-opacity duration-500 ease-in-out ${
               isTransitioning ? "opacity-0" : "opacity-100"
             }`}
           />
@@ -105,8 +105,8 @@ function Merchandise() {
 
           {/* Text Overlay */}
           <div className="absolute bottom-10 text-center text-white">
-            <button className="bg-gray-900 text-white h-8 w-36 p-3 rounded-[40px] mt-5">
-              <p className="-mt-2">Discover</p>
+            <button className="merchandise-button bg-gray-900 text-white h-8 w-36 p-3 rounded-[40px] mt-5">
+              <p className="md:-mt-2">Discover</p>
             </button>
           </div>
         </div>

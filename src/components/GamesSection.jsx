@@ -55,9 +55,9 @@ function GamesSection() {
 
   return (
     <div className="bg-[radial-gradient(42.38%_44.19%_at_50.14%_67.33%,_#FFF280_0%,_#FFC700_100%)] flex-col justify-center text-center">
-      <div className="w-screen h-auto">
-        <p className="text-[150px] text-[#ffffff] font-CheeseBurga font-extrabold">Games</p>
-        <p className="text-[50px] text-[#353535] font-extrabold -mt-14">
+      <div className=" md:w-screen md:h-auto games-container">
+        <p className="games-container md:text-[150px] text-[#ffffff] font-CheeseBurga font-extrabold games-title">Games</p>
+        <p className="md:text-[50px] text-[#353535] font-extrabold md:-mt-14 games-subtitle">
           Stay tuned for upcoming games!{" "}
         </p>
       </div>

@@ -18,14 +18,14 @@ function GamesPreview() {
     };
   
     return (
-      <div className="p-5 content-center bg-[#ffffff] h-auto">
+      <div className="md:p-5 content-center bg-[#ffffff] md:h-auto">
         {/* Tabs for filtering content */}
-        <div className="flex justify-between space-x-4 text-[40px] ml-10 font-extrabold">
+        <div className="flex justify-between space-x-4 text-[40px] ml-10 font-extrabold games-text">
             <h1 className='md:uppercase'><span className='text-[#FFA800]'>Game</span> Previews</h1>
         </div>
   
         {/* Scrollable container */}
-        <div className="relative mt-5">
+        <div className="relative md:mt-5 games-gallery">
           
           <div
             ref={scrollContainerRef}
