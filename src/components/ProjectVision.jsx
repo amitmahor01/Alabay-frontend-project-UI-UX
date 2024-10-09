@@ -4,14 +4,14 @@ import ProjectVisionImage from "../images/ProjectVisionImage.png";
 function ProjectVision() {
   return (
     <>
-      <div className="h-auto w-screen flex-col bg-slate-200 content-center bg-gradient-to-tr from-[#FFC700] to-yellow-400 via-white bg-gradient-to-tl from-[#FFC700] to-white via-white">
+      <div className="h-auto w-screen flex-col bg-slate-200 content-center bg-gradient-to-tr from-[#FFC700] to-yellow-400 via-white">
         <div>
           <h1 className="text-[#ffa800] text-[150px] font-CheeseBurga align-center font-bold ml-40">
             PROJECT VISION
           </h1>
         </div>
         <div>
-          <img src={ProjectVisionImage} alt="" srcset=""  />
+          <img src={ProjectVisionImage} alt="Project Vision" />
         </div>
         <div>
           <h2 className="text-gray-800 text-center text-2xl font-bold">
