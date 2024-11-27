@@ -1,184 +1,191 @@
+  /* Base styles - Mobile First */
+  :root {
+    --primary-color: #ffa800;
+    --text-color: #ffffff;
+    --accent-color: #b6f963;
+  }
 
-.text-border {
-  -webkit-text-stroke: 1px black;
-  /* Border color and thickness */
+  /* Common text styles */
+  .text-border {
+    -webkit-text-stroke: 1px black;
+    display: inline-block;
+    text-shadow: 4px 6px rgb(26, 21, 21);
+    letter-spacing: 2px;
+  }
 
-  display: inline-block; /* Makes the shadow more effective */
-  text-shadow: 6px 8px rgb(26, 21, 21);
-  letter-spacing: 3px;
-}
-/* app.css */
-
-/* General styles */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* Responsive styles for Introduction */
-.intro-title {
-  @apply text-[90px] font-CheeseBurga font-bold tracking-widest leading-relaxed text-[#b6f963];
-}
-
-@media (max-width: 768px) {
+  /* Responsive Typography */
   .intro-title {
-    @apply text-5xl; /* Adjust for smaller screens */
-    margin-left: 10px; /* Reduce margin */
-    padding: 5px; /* Reduce padding */
+    @apply text-5xl font-CheeseBurga font-bold tracking-wide text-[#b6f963];
+    padding: 10px;
   }
-}
 
-/* Responsive styles for Alabay History */
-.history-title {
-  @apply text-[60px] font-extrabold text-orange-500 -ml-12 leading-relaxed;
-
-}
-
-@media (max-width: 768px) {
   .history-title {
-    @apply text-4xl; /* Adjust for smaller screens */
+    @apply text-4xl font-extrabold text-orange-500 leading-relaxed;
+    margin: 0 10px;
   }
-}
 
-.history-subtitle {
-  @apply text-[120px] font-CheeseBurga font-bold text-[#ffffff];
-}
-
-@media (max-width: 768px) {
   .history-subtitle {
-    @apply text-6xl; /* Adjust for smaller screens */
+    @apply text-6xl font-CheeseBurga font-bold text-[#ffffff];
   }
-}
 
-/* Photo Gallery styles */
-.photo-gallery {
-  @apply p-5 bg-slate-200;
-}
+  /* Desktop Styles */
+  @media (min-width: 769px) {
+    .intro-title {
+      @apply text-[90px] tracking-widest;
+    }
 
-.photo-card {
-  @apply min-w-80 bg-gray-300 h-40 rounded-lg flex items-center justify-center text-xl;
-}
+    .history-title {
+      @apply text-[60px] -ml-12;
+    }
 
-@media (max-width: 768px) {
+    .history-subtitle {
+      @apply text-[120px];
+    }
+
+    .project-vision-title {
+      @apply text-[80px];
+    }
+
+    .games-container {
+      @apply w-[90vw] h-auto p-9 ml-16 flex justify-center;
+    }
+  }
+
+  /* Optimized Mobile Styles */
+  @media (max-width: 768px) {
+    .project-vision-text {
+      @apply text-sm p-4;
+    }
+
+    .tokenomics-text-main {
+      @apply text-[12px] p-2;
+    }
+
+    .games-gallery {
+      @apply p-2 flex flex-col gap-4;
+    }
+
+    .social-media-logo {
+      @apply h-auto w-full max-w-[400px] p-4;
+    }
+  }
+
+  /* Photo Gallery styles */
+  .photo-gallery {
+    @apply p-5 bg-slate-200;
+  }
+
   .photo-card {
-    @apply min-w-[100px] h-32 text-lg; /* Smaller cards on mobile */
+    @apply min-w-80 bg-gray-300 h-40 rounded-lg flex items-center justify-center text-xl;
   }
-}
 
-/* Project Vision styles */
-.project-vision-title {
-  @apply text-[#ffa800] text-[80px] font-CheeseBurga font-bold ;
-}
+  @media (max-width: 768px) {
+    .photo-card {
+      @apply min-w-[100px] h-32 text-lg; /* Smaller cards on mobile */
+    }
+  }
 
-@media (max-width: 768px) {
+  /* Project Vision styles */
   .project-vision-title {
-    @apply text-6xl ml-20; /* Adjust for smaller screens */
+    @apply text-[#ffa800] text-[80px] font-CheeseBurga font-bold ;
+  }
+
+  @media (max-width: 768px) {
+    .project-vision-title {
+      @apply text-6xl ml-20; /* Adjust for smaller screens */
      /* Reduce margin */
+    }
+    .project-vision-text{
+      @apply text-sm;
+    }
   }
-  .project-vision-text{
-    @apply text-sm;
-  }
-}
 
-/* RoadMap styles */
-.road-map-title {
-  @apply text-[#ffa800] font-CheeseBurga font-extrabold text-[100px] ml-28;
-}
-
-@media (max-width: 768px) {
+  /* RoadMap styles */
   .road-map-title {
-    @apply text-5xl; /* Adjust for smaller screens */
-    margin-left: 5px; /* Reduce margin */
+    @apply text-[#ffa800] font-CheeseBurga font-extrabold text-[100px] ml-28;
   }
-  .road-map-text{
-    @apply text-lg;
+
+  @media (max-width: 768px) {
+    .road-map-title {
+      @apply text-5xl; /* Adjust for smaller screens */
+      margin-left: 5px; /* Reduce margin */
+    }
+    .road-map-text{
+      @apply text-lg;
+    }
+    .road-map.img{
+      @apply  mt-40;
+    }
   }
-  .road-map.img{
-    @apply  mt-40;
+
+  /* Community styles */
+  @media (max-width: 768px){
+  .community-title{
+    @apply h-48 text-sm mt-20;
   }
-}
+  }
 
-/* Community styles */
-@media (max-width: 768px){
-.community-title{
-  @apply h-48 text-sm mt-20;
-}
-}
-
-/* Tokenomics styles */
-.tokenomics-title {
-  @apply text-[#ffa800] font-CheeseBurga font-extrabold text-[100px] ml-28;
-}
-
-@media (max-width: 768px) {
+  /* Tokenomics styles */
   .tokenomics-title {
-    @apply text-6xl ml-[2px]; /* Adjust for smaller screens */
+    @apply text-[#ffa800] font-CheeseBurga font-extrabold text-[100px] ml-28;
   }
-  .tokenomics-text-main{
-    @apply text-[10px];
+
+  @media (max-width: 768px) {
+    .tokenomics-title {
+      @apply text-6xl ml-[2px]; /* Adjust for smaller screens */
+    }
+    .tokenomics-text-main{
+      @apply text-[10px];
+    }
+    .tokenmics-button-font{
+      @apply text-[20px] w-32 h-10 ml-4;
+    }
+    .tokenomics-text-sub{
+      @apply text-[10px] ml-4 mt-2;
+    }
   }
-  .tokenmics-button-font{
-    @apply text-[20px] w-32 h-10 ml-4;
-  }
-  .tokenomics-text-sub{
-    @apply text-[10px] ml-4 mt-2;
-  }
-}
 
-
-
-
-
-/* GamesSection styles */
-.games-title {
-  @apply text-[150px] text-[#ffffff] font-CheeseBurga font-extrabold;
-}
-
-@media (max-width: 768px) {
+  /* GamesSection styles */
   .games-title {
-    @apply text-6xl; /* Adjust for smaller screens */
+    @apply text-[150px] text-[#ffffff] font-CheeseBurga font-extrabold;
   }
-  .merchandise-title{
-    @apply text-6xl;
-  }
-  .merchandise-button{
-    @apply  p-1;
-  }
-}
 
-.games-subtitle {
-  @apply text-[50px] text-[#353535] font-extrabold -mt-14;
-}
+  @media (max-width: 768px) {
+    .games-title {
+      @apply text-6xl; /* Adjust for smaller screens */
+    }
+    .merchandise-title{
+      @apply text-6xl;
+    }
+    .merchandise-button{
+      @apply  p-1;
+    }
+  }
 
-@media (max-width: 768px) {
   .games-subtitle {
-    @apply text-3xl; /* Adjust for smaller screens */
+    @apply text-[50px] text-[#353535] font-extrabold -mt-14;
   }
-}
 
-/* Flex container for Games Section */
-.games-container {
-  @apply w-[90vw] h-auto p-9 ml-16 flex justify-center items-center relative transition-all duration-500;
-}
+  @media (max-width: 768px) {
+    .games-subtitle {
+      @apply text-3xl; /* Adjust for smaller screens */
+    }
+  }
 
-@media (max-width: 768px) {
-  .games-container {
-    @apply ml-12 p-12 flex-col ; /* Adjust margin for mobile */
+  @media (max-width: 768px) {
+    .games-container {
+      @apply ml-12 p-12 flex-col ; /* Adjust margin for mobile */
+    }
+    .games-text{
+      @apply text-[30px] ml-20;
+    }
+    .games-gallery{
+      @apply p-2 -mt-4; 
+    }
+    .social-media-text{
+      @apply text-5xl ml-16;
+    }
+    .social-media-logo{
+      @apply h-80 w-[700px] p-8;
+    }
   }
-  .games-text{
-    @apply text-[30px] ml-20;
-  }
-  .games-gallery{
-    @apply p-2 -mt-4; 
-  }
-  .social-media-text{
-    @apply text-5xl ml-16;
-  }
-  .social-media-dog-img{
-    
-  }
-  .social-media-logo{
-    @apply h-80 w-[700px] p-8;
-  }
-}
-
